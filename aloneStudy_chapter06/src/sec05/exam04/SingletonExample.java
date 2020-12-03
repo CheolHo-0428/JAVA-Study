@@ -1,0 +1,22 @@
+package sec05.exam04;
+
+public class SingletonExample {
+
+	public static void main(String[] args) {
+		//컴파일 에러가 나는 부분
+		/*
+		Singleton obj1 = new Sigleton();
+		Singleton obj2 = new Sigleton();
+		*/
+		
+		Singleton obj1 = Singleton.getInstance();
+		Singleton obj2 = Singleton.getInstance();
+		
+		if(obj1 == obj2) {
+			System.out.println("같은 Singleton 객체입니다.");
+		}
+		else {
+			System.out.println("다른 Singleton 객체입니다.");
+		}
+	}
+}
