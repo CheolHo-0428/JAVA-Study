@@ -1,13 +1,9 @@
 package sec01.exam06;
 
-public class SportsCar extends Car{
+public class SportsCar extends Car {
 
 	@Override
-	public void speedUp() { speed += 10; }
-		
-	@Override
-	public void stop() {
-		System.out.println("½ºÆ÷Ã÷Ä«¸¦ ¸ØÃã");
-		speed = 0;
+	public void speedUp() {
+		speed = speed + 10;
 	}
 }

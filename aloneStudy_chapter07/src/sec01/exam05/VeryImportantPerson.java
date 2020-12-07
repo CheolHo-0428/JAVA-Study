@@ -1,6 +1,11 @@
 package sec01.exam05;
 
+public class VeryImportantPerson {
+	
+	int Num(int x, int y) {
+		int z = x + y;
+		System.out.println("합계: " + z);
+		return z;
+	}
 
-//Member를 상속할 수 없음
-public class VeryImportantPerson extends Member {
 }

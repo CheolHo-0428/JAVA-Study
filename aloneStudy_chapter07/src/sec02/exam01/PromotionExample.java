@@ -1,12 +1,11 @@
 package sec02.exam01;
-
 class A {}
 
-class B extends A {}
-class C extends A {}
+class B extends A{}
+class C extends A{}
 
-class D extends B {}
-class E extends C {}
+class D extends B{}
+class E extends C{}
 
 public class PromotionExample {
 	public static void main(String[] args) {
