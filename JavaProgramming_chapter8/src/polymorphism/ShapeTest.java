@@ -31,7 +31,5 @@ public class ShapeTest {
 	for(Shape s : list) {
 		s.draw();
 	}
-
 	}
-
 }
