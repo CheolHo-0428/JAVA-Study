@@ -9,7 +9,7 @@ public class POSPanel extends JPanel {
 			"아메리카노","ICE아메리카노","카페라떼","ICE카페라떼",
 			"카페모카","카푸치노","바닐라라떼","ICE바닐라라떼",
 			"녹차라떼","아이스티","자몽에이드","청포도에이드",
-			"딸기스무디","블루베리스무디","레몬티","유자차"};
+			"딸기스무디","블루배리스무디","레몬티","유자차"};
 	int[] price = {
 			1500,1800,2500,2500,
 			3000,3000,3500,3500,
@@ -26,10 +26,10 @@ public class POSPanel extends JPanel {
 	
 	class Screen extends JPanel{
 		Screen(){
-			setBackground(Color.WHITE);
+			setBackground(Color.BLUE);
 			DefaultTableModel m = (DefaultTableModel)table.getModel();
 			table.setRowHeight(50);
-			table.getTableHeader().setFont(new Font("맑은고딕", Font.BOLD, 15));
+			table.getTableHeader().setFont(new Font("궁서", Font.BOLD, 15));
 			add(new JScrollPane(table));
 		}
 	}
@@ -37,7 +37,7 @@ public class POSPanel extends JPanel {
 	class MenuBtn extends JPanel{
 		MenuBtn(){
 			setLayout(new GridLayout(6,3,3,3));
-			setBackground(Color.WHITE);
+			setBackground(Color.GREEN);
 			for(int i=0;i<MBtn.length;i++) {
 				MBtn[i]= new JButton(menu[i]);
 				add(MBtn[i]);
@@ -47,7 +47,7 @@ public class POSPanel extends JPanel {
 	
 	class StrBtn extends JPanel{
 		StrBtn(){
-			setBackground(Color.WHITE);
+			setBackground(Color.BLACK);
 			setLayout(new GridLayout(1,4,3,3));
 			
 			for(int i=0;i<Str.length;i++) {
@@ -59,12 +59,12 @@ public class POSPanel extends JPanel {
 	
 	public POSPanel() {
 		setLayout(null);
-		setBackground(Color.WHITE);
+		setBackground(Color.YELLOW);
 		MenuBtn mbtn = new MenuBtn();
 		StrBtn sbtn = new StrBtn();
 		Screen sc = new Screen();
 		
-		//금액란
+		//湲덉븸��
 		tf.setSize(450, 70);
 		tf.setLocation(50, 480);
 		add(tf);
@@ -81,7 +81,7 @@ public class POSPanel extends JPanel {
 		sbtn.setLocation(530, 480);
 		add(sbtn);
 		
-		//메뉴추가
+		//硫붾돱異붽�
 		for(int i=0;i<MBtn.length;i++) {
 			final int index =i;
 			MBtn[i].addActionListener(new ActionListener() {
@@ -93,7 +93,7 @@ public class POSPanel extends JPanel {
 				}
 			});
 		}
-		//쿠폰
+		//荑좏룿
 		SBtn[0].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -102,7 +102,7 @@ public class POSPanel extends JPanel {
 			}
 		});
 		
-			//선택취소
+			//�꽑�깮痍⑥냼
 		SBtn[1].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -114,7 +114,7 @@ public class POSPanel extends JPanel {
 		});
 		
 		
-		//전체취소
+		//�쟾泥댁랬�냼
 		SBtn[2].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -126,7 +126,7 @@ public class POSPanel extends JPanel {
 			}
 		});
 		
-		//결제버튼
+		//寃곗젣踰꾪듉
 		SBtn[3].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -136,8 +136,8 @@ public class POSPanel extends JPanel {
 				for(int i=0;i<rowCont;i++) {
 					sum += (int)table.getValueAt(i, 2);
 				}
-				tf.setText(String.valueOf(" 총 금액 : "+sum));
-				tf.setFont(new Font("맑은고딕", Font.BOLD, 40));
+				tf.setText(String.valueOf(" 총금액 : "+sum));
+				tf.setFont(new Font("궁서", Font.BOLD, 40));
 			}
 		});
 	}

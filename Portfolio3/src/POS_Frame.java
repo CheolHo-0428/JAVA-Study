@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class POS_Frame extends JFrame {
 	public POS_Frame() {
-		setTitle("POS 프로그램 - 이지혜");
+		setTitle("POS ���α׷�");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		setContentPane(new POSPanel());
